@@ -1,3 +1,5 @@
 total/
 config.py
 *.pyc
+*.zip
+*.tar.gz
