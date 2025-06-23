@@ -3,7 +3,6 @@
 Este script separa aleatoriamente un 5% de las imágenes de cada clase en total/archive/Training/ y las mueve a total/archive/Testing/ manteniendo la estructura de carpetas.
 """
 
-import os
 import random
 import shutil
 from pathlib import Path
