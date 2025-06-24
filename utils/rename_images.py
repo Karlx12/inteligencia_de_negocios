@@ -15,7 +15,7 @@ def rename_images(base_dir):
             continue
         prefix = class_dir[0].lower()
         images = sorted(glob.glob(os.path.join(class_path, "*.jpg")))
-        num_digits = 5
+        num_digits = 6
         for idx, img_path in enumerate(images, 1):
             ext = os.path.splitext(img_path)[1]
             new_name = f"{prefix}_{str(idx).zfill(num_digits)}{ext}"
@@ -26,5 +26,5 @@ def rename_images(base_dir):
 
 
 if __name__ == "__main__":
-    BASE_DIR = "total/archive/Training"
+    BASE_DIR = "total/archive/Augmented"
     rename_images(BASE_DIR)

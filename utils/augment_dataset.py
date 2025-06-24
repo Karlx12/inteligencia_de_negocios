@@ -19,7 +19,9 @@ transform = A.Compose(
         A.HorizontalFlip(p=0.5),
         A.VerticalFlip(p=0.5),
         A.Rotate(limit=30, p=0.5),
-        A.RandomBrightnessContrast(brightness_limit=0.2, contrast_limit=0.2, p=0.3),
+        A.RandomBrightnessContrast(
+            brightness_limit=0.2, contrast_limit=0.2, p=0.3
+        ),
         A.GaussianBlur(blur_limit=(3, 7), p=0.2),
         A.CLAHE(p=0.3),
     ]
@@ -47,7 +49,9 @@ def augment_dataset(input_dir, output_dir, aug_per_image=AUG_PER_IMAGE):
             for i in range(aug_per_image):
                 augmented = transform(image=img)
                 aug_img = augmented["image"]
-                aug_name = out_class_dir / f"{img_path.stem}_aug{i}{img_path.suffix}"
+                aug_name = (
+                    out_class_dir / f"{img_path.stem}_aug{i}{img_path.suffix}"
+                )
                 cv2.imwrite(str(aug_name), aug_img)
 
 

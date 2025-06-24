@@ -4,3 +4,5 @@ config.py
 *.zip
 *.tar.gz
 models/*
+*/logs/*
+*.keras

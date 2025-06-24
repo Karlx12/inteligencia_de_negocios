@@ -52,5 +52,5 @@ def balance_classes(data_dir, mode="undersample", seed=42):
 
 
 if __name__ == "__main__":
-    DATA_DIR = "total/archive/Training"
+    DATA_DIR = "total/archive/Augmented"  # Cambia a tu directorio de datos
     balance_classes(DATA_DIR, mode="undersample")

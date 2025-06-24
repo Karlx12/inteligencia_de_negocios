@@ -29,6 +29,6 @@ def split_test_set(base_dir, test_dir, test_ratio=0.05, seed=42):
 
 
 if __name__ == "__main__":
-    BASE_DIR = "total/archive/Training"
+    BASE_DIR = "total/archive/Augmented"  # Cambia a tu directorio de entrenamiento
     TEST_DIR = "total/archive/Testing"
     split_test_set(BASE_DIR, TEST_DIR)
